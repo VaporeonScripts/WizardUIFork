@@ -1,108 +1,188 @@
 /**
-* @name WizardUIFork
-* @author Natsuyami
-* @authorLink https://github.com/VaporeonScripts
-* @version Custom
-* @invite 8Hz9qTjJaB
-* @description An amazing modular and fully customizable theme, made with 💖 by NEBULYS.
-* @website https://discord.gg/8Hz9qTjJaB
+ * @name Chillax
+ * @author Chillax Squad
+ * @authorLink https://github.com/warrayquipsome/Chillax#Authors
+ * @version 2.1.0
+ * @invite DrfX6286kF
+ * @description The theme where calm meets customization.
+ * @source https://github.com/warrayquipsome/Chillax
 */
 
-@import url("https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap");
-
-@import url("https://goldenlys.github.io/WizardUI/addons/Marianne.css"); 
-
-@import url("https://goldenlys.github.io/WizardUI/base.css");
-
-/* 
-    HoverMembers.css
-
-  This is an addon that makes the members list hidden until you hover it.
-
-@import url("https://goldenlys.github.io/WizardUI/addons/HoverMembers.css"); 
+/*
+     ⸙  ────     ────     ───── ❝ 𝐚𝐥𝐥 𝐫𝐢𝐠𝐡𝐭 𝐡𝐞𝐫𝐞 ❞ ─────    ────     ────  ⸙
+  ╭─ ━━━━━━━━━ ━━━━━━━ ━━━━━━━━━ -ˋˏ ༻🂡༺ ˎˊ- ━━━━━━━━━ ━━━━━━━ ━━━━━━━━━ ─╮
+          █████╗   ██╗  ██╗  ██╗  ██╗      ██╗       █████╗   ██╗  ██╗
+         ██╔══██╗  ██║  ██║  ██║  ██║      ██║      ██╔══██╗  ╚██╗██╔╝
+  ||     ██║  ╚═╝  ███████║  ██║  ██║      ██║      ███████║   ╚███╔╝      ||
+         ██║  ██╗  ██╔══██║  ██║  ██║      ██║      ██╔══██║   ██╔██╗
+         ╚█████╔╝  ██║  ██║  ██║  ███████╗ ███████╗ ██║  ██║  ██╔╝╚██╗
+          ╚════╝   ╚═╝  ╚═╝  ╚═╝  ╚══════╝ ╚══════╝ ╚═╝  ╚═╝  ╚═╝  ╚═╝
+  ╰─ ━━━━━━━━━ ━━━━━━━ ━━━━━━━━━ -ˋˏ ༻-༺ ˎˊ- ━━━━━━━━━ ━━━━━━━ ━━━━━━━━━ ─╯
 */
 
-@import url("https://goldenlys.github.io/WizardUI/addons/UserIsTyping.css"); 
+/* CHILLAX theme entry point */
+@import url("https://warrayquipsome.github.io/Chillax/chillax.css");
 
-@import url("https://goldenlys.github.io/WizardUI/addons/EvenMoreColors/3.css"); 
+/* removable addons */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Microsoft.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
+@import url("https://chillax-org.github.io/Discolored/main.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/FolderRedesign.css");
+@import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/refs/heads/deploy/RadialStatus.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/FriendGrid.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/ColoredLinks.css");
+
+/*additional addons*/ /*(remove the both * to use)*/
+/*use the below css if you are experiencing lag (remove the both * to use)*/
+@import url("https://warrayquipsome.github.io/Chillax/Addons/SimpleLessLag.css");
+/* To hide annoying elements such as nitro, shop, sticker picker etc tab (remove the both * to use)*/
+/*@import url("https://warrayquipsome.github.io/Chillax/Addons/HideAnnoyingElements.css");*/
 
 
+/*Chillax Roots*/
 :root {
-    /* MAIN VARIABLES */
-    --Watermark: "- WizardUI v" var(--version);
-    --font: 'Quicksand', 'emoji', sans-serif;
-    --Text: rgb(255, 255, 255);
-    --logo: url(https://goldenlys.github.io/WizardUI/images/home.png);
-    --sendmessage-text-lines: 8;
-
-    /* STATUS VARIABLES */
-    --Online: rgb(0, 255, 6);
-    --Idle: rgb(18, 100, 239);
-    --Unavailable: rgb(228, 15, 0);
-    --Offline: rgb(90, 95, 100);
-    --Streaming: rgb(110, 0, 196);
-
-    /* UI COLOR VARIABLES */
-    --grey: rgb(18, 19, 31);
-    --grey5: rgba(18, 19, 31, .75);
-    --darkgrey: rgb(10, 10, 20);
-    --darkgrey5: rgba(10, 10, 20, .75);
-    --ui-success: rgb(69, 208, 34);
-    --ui-warning: rgb(238, 165, 30);
-    --ui-error: rgb(208, 34, 34);
-
-    /* THEME COLORS */
-    --Primary: rgb(117 76 205);
-    --text-link: var(--Primary);
-    --text-shadow: rgb(0 0 0);
-    --Highlighted: rgba(117 76 205 / 50%);
-    --MessageHover: transparent;
-    --Unread: rgb(173, 16, 16);
-    --Hover: rgb(18 19 31 / 50%);
-
-    /* BACKGROUNDS */
-    --background: url(https://goldenlys.github.io/WizardUI/images/backgrounds/nebula.jpg);
-    --bg-titlebar: rgba(0, 0, 0, 0.65);
-    --bg-servers: rgba(0, 0, 0, 0.65);
-    --bg-ui: rgba(0, 0, 0, 0.65);
-    --bg-chatbox: rgba(0, 0, 0, 0.5);
-    --bg-sendmessage: rgba(0, 0, 0, 0.65);
-    --bg-members: rgba(0, 0, 0, 0.65);
-    --bg-chat-elements: rgba(0, 0, 0, 0.5);
-    --bg-settings: var(--darkgrey);
-    --bg-colorprofile: rgba(0, 0, 0, 0.5);
-    --bg-alt-message: transparent;
-
-    /* SERVER SETTINGS */
-    --ServerSize: 45px;
-    --ServerPills: var(--Primary);
-    --ServerFoldersColor: var(--Primary);
-
-    /* ROUNDING */
-    --Rounding: 5px;
-    --AvatarRounding: var(--Rounding);
-
-    /* RGB ADDON */
-    --ColorTime: 2s;
-    --Color2: rgb(0, 225, 255);
-    --Color3: rgb(0 0 0);
-    --Color4: rgb(0 0 0);
-    --Color5: rgb(0 0 0);
-    --Color6: rgb(0 0 0);
-    --Color7: rgb(0 0 0);
-    --Color8: rgb(0 0 0);
-    --Color9: rgb(0 0 0);
-    --Color10: rgb(0 0 0);
-
-    /* 
-        SHOWN BUTTONS IN THE MESSSAGE BOX
-
-      Choose between 'none' or 'flex'
-      none will disable / hide the button and flex will make it appear again
-    
-    */
-    --Show_Gift_Button: none;
-    --Show_GIF_Button: none; 
-    --Show_Sticker_Button: none; 
-    --Show_Apps_Button: flex;
+    /*background image*/ /*(replace the link to use)*/
+    --background-image: var(--wallpaper);
+    --bg-opacity: 100%;
+    /*bg dev suggestions*/
+    --wallpaper: url("https://wallpaperaccess.com/full/2799204.jpg");
+    /*modern background selection*/
+    --modern-dark-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-dark-bg.png");
+    --modern-light-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-light-bg.png");
 }
+
+
+/*window*/ /*dark mode*/
+:root.theme-dark {
+    --window-margin: 20px; /*must be above 20px*/
+    --window-colour: #0009;
+    --window-blur: 5px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(36, 36, 36);
+}
+
+/*window*/ /*light mode*/
+:root.theme-light {
+    --window-margin: 20px; /*must be above 20px*/
+    --window-colour: rgba(255, 255, 255, 0.6);
+    --window-blur: 5px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(209, 209, 209);
+}
+
+
+/*roots*/ /*both dark and light*/
+:root {
+    --user-name: "King";
+    --edited-message: " EDITED ✎ ";
+    --font-name: Poppins;
+    --font-size: 13px;
+    --group-chat-font: "Monoton"; /* change this to change the group chat's default font */
+
+
+    /*glow radial status*/ /*must end in px*/
+    --rs-small-spacing: 0px;
+    --rs-large-spacing: 0px;
+    --rs-medium-spacing: 0px;
+    --rs-small-width: 2.5px;
+    --rs-medium-width: 3.5px;
+    --rs-large-width: 4.5px;
+    --rs-avatar-shape: 50%;
+    --rs-online-color: #1df594;
+    --rs-idle-color: #faa61a;
+    --rs-dnd-color: #f04747;
+    --rs-offline-color: #636b75;
+    --rs-streaming-color: #643da7;
+    --rs-invisible-color: #636b75;
+    --rs-phone-visible: block; /* change it to `none` to disable mobile icon */
+    --rs-phone-color: var(--rs-online-color);
+
+    /* For accent color to take full effect must need to change both */
+    /* chillax colours rgb */
+    --accentcolor: 251, 84, 84;
+    /* chillax colours hex */
+    --accentcolorV2: #fb5454;
+
+
+    /* settings modal root */
+    --themelightsettingsmodalbackground: rgb(223, 223, 223);
+    --themedarksettingsmodalbackground: rgb(51, 49, 53);
+    --settingsmodalwidth: 960px;
+    --settingsmodalheight: 80vh;
+
+    /* avatar only member list */
+    --memberlist-border-radius: 10px; /* can be in `px`, `rem`, `em` */
+
+    /* placeholder texts/values */
+    /* input fields */
+    --chillax-input-field: "Life is so much easier when you just take a moment to chill";
+    /* input fields  when the channel is locked*/
+    --chillax-input-field-locked: "Unfortunately, you can't chill in this channel";
+    /* typing indicator: when a single person is typing */
+    --chillax-input-typing-indicator-one-person: "is smashing some buttons";
+    /* typing indicator: when more than one person is typing */
+    --chillax-input-typing-indicator-many-person: "are smashing some buttons";
+
+    /* scroller (by default transparent) */
+    --chillax-scroller-color: transparent; /* change `transparent` to some other hex color to make it visible */
+
+    /* Spotify Player Control Squid GIF Adjustments */
+
+    /* Change the ulr in the `--chillax-spotify-control-squid-gif-url` css var to your liking */
+    --chillax-spotify-control-squid-gif-url: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0c/Glow_Squid_BE1.gif";
+    /* adjust the height and width accordingly */
+    --chillax-spotify-control-squid-width: 25px;
+    --chillax-spotify-control-squid-height: 25px;
+
+}
+
+/*discord transparency*//*roots*/ /*theme dark*/
+.theme-dark {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #9d9d9d;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(36, 36, 36);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/*discord transparency*//*roots*/ /*theme light*/
+.theme-light {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: rgb(0, 0, 0);
+    --header-secondary: #3f3f3f;
+    --text-normal: #303030;
+    --text-muted: #333333;
+    --channels-default: #585b5e;
+    --interactive-normal: #3a3a3a;
+    --interactive-hover: #333333;
+    --interactive-active: rgb(0, 0, 0);
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(27, 27, 27);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/*!*friends grid banner colour*!*/
+/*.theme-dark {*/
+/*    --FG-cards-banner-background: transparent !important;*/
+/*}*/
+
+/*.theme-light {*/
+/*    --FG-cards-banner-background: transparent !important;*/
+/*}*/
